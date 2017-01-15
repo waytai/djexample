@@ -27,6 +27,8 @@ def stcl(request):
 
     clothe1 = Clothes.objects.create(color=color1, description='maoyi')
     clothe2 = Clothes.objects.create(color=color2, description='maoyi')
+    color1.clothes_set.create(description='yuyi')
+    color1.clothes_set.add(clothe2)
 
     return HttpResponse('ok')
 
